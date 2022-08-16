@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-// import "./CodeEditor.css";
-import { Form, Row, Col, Button, Dropdown, DropdownButton, InputGroup, Accordion } from "react-bootstrap";
+import "./CodeEditor2.css";
+import { Form, Row, Col, Button, Dropdown, DropdownButton, InputGroup, Container } from "react-bootstrap";
 import AceEditor from "react-ace";
 import "react-ace-builds/webpack-resolver-min";
 
-export default function CodeEditor() {
+export default function CodeEditor2() {
 
 
     let themes={
@@ -68,10 +68,10 @@ export default function CodeEditor() {
     }
 
   return (
-    <Form>
+    <Form classname="scrollablediv2">
         <Form.Group controlId="codearea">
-            <div className="Container" style={{marginLeft:"30px"}}>
-                <Row className="upperRight justify-content-between align-items-center">
+            <div>
+                <Row className="upperRight justify-content-between my-2">
                 {/* <Row className="upperRight justify-content-between my-2"> */}
                     {/* <label >
                         Pick you language: */}
@@ -110,8 +110,6 @@ export default function CodeEditor() {
                             </select>
                         </Col>
 
-                        
-                        
                         
                     {/* </label> */}
                           {/* <InputGroup className="mb-3">
@@ -155,55 +153,13 @@ export default function CodeEditor() {
 
         </div>
         <div className="lowerRight">
-            <Row className="px-2">
-                <div className="accordion" id="accordionExample">
-                    <div className="accordion-item">
-                      <div id="flush-collapseOne" className="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <div className="accordion-body text-black">
-                            {/* Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body. */}
-                            <Row>
-                                <Col>Input <br /> <textarea rows="2" /></Col>
-                                <Col md={2}><br /><Button >Test</Button></Col>
-                                <Col>Output <br /> <textarea rows="2" /></Col>
-                            </Row>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-            </Row>
             <Row className="upperRight justify-content-between my-2">
                 <Col>
-                <label for="file-upload" class="custom-file-upload text-light">
-                    <i class="fa fa-cloud-upload"></i> Custom Upload
-                </label>
-                <input id="file-upload" type="file"/>
+                    <Button className="btn btn-primary file" >Upload File</Button>
                 </Col>
 
-
-
                 <Col>
-                    {/* <Button className="btn btn-primary" >Test Cases</Button> */}
-                    {/* <Accordion.Item eventKey="0">
-                          <Accordion.Header>Accordion Item #1</Accordion.Header>
-                          <Accordion.Body>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                            culpa qui officia deserunt mollit anim id est laborum.
-                          </Accordion.Body>
-                    </Accordion.Item> */}
-                      {/* <h2 className="accordion-header" id="headingOne"><button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Test Cases</button></h2> */}
-                      {/* <h2 id="headingOne"><button className="btn btn-primary collapsed dropdown-toggle dropup" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Test Cases</button></h2> */}
-                    <div className="btn-group dropup">
-                        <button type="button" className="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Test Cases
-                        </button>
-                    </div>
-
-
+                    <Button className="btn btn-primary" >Test Cases</Button>
                 </Col>
 
                 <Col>

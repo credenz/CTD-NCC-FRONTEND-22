@@ -5,6 +5,7 @@ body{
     color: white;
     height: 100vh;
     overflow-y: hidden;
+    overflow-x: hidden
 }
 
 .container-fluid{
@@ -13,6 +14,9 @@ body{
     overflow: hidden;
 }
 
+.scoreButton{
+    background-color: rgb(38, 69, 194);
+}
 
 .leftBox{
     border: 1px solid white;
@@ -29,7 +33,10 @@ body{
 .rightBox{
     border: 1px solid white;
     padding: 10px;
-    height: calc(79vh);
+    /* height: calc(79vh); */
+    /* height: max-content; */
+    width: 50%;
+    height: calc(100vh - 120px);
     overflow-y: scroll;
 }
 
@@ -39,12 +46,35 @@ body{
 
 .QuestionBox{
     background-image: linear-gradient(to top right, #152238 0%, #152238 100%);
-    border: 1px solid white;
+    border: 1px solid white; 
 }
+
+/* width */
+::-webkit-scrollbar {
+    background: #9a8c8c; 
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 7px;
+  }
+   
+  /* Handle */
+  /* background: red;  */
+  /* ::-webkit-scrollbar-thumb {
+    border-radius: 7px;
+  } */
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #c7b9b9; 
+  }
 
 .questionTitle{
     /* background-image: linear-gradient(to top right,#1752b9 0%, #005eff 100%) */
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 hr{
@@ -74,3 +104,18 @@ hr{
     color: white;
 }
 
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #34308e;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.custom-file-upload:hover {
+    background-color: #323ec0;
+}

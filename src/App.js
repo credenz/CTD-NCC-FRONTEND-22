@@ -7,6 +7,10 @@ import { Routes, Route, Link } from "react-router-dom";
 import InputBox from './components/Coding/InputBox';
 import OutputBox from './components/Coding/OutputBox';
 import CodeEditor from './components/Coding/CodeEditor';
+import Coding2 from './components/Coding/Coding2';
+import Ldiv from './components/ldiv/Ldiv';
+import Rdiv from './components/rdiv/Rdiv';
+import Rcoding from './components/rdiv/Rcoding';
 
 function App() {
   return (
@@ -45,10 +49,13 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Coding />} />
+        <Route path="/trial2" element={<Coding2 />} />
         <Route path="/question" element={<Question />} />
         <Route path="/codeEditor" element={<CodeEditor />} />
         <Route path="/input" element={<InputBox />} />
         <Route path="/output" element={<OutputBox />} />
+        <Route path="/ldiv" element={<Ldiv />} />
+        <Route path="/rdiv" element={<Rcoding />} />
       </Routes>
 
       <Navbar bg="dark" variant="dark" fixed="bottom">
