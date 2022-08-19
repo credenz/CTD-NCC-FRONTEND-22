@@ -1,0 +1,10 @@
+.mdiv{
+    background-color: black;
+    width: 100%;
+    height: calc(100vh - 112px);
+    padding: 20px 50px;
+    margin-top: 56px;
+    display: flex;
+    flex-direction: row;
+}
+
