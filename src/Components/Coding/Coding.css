@@ -1,5 +1,7 @@
 .mdiv{
-    background-color: black;
+    /* background-image: radial-gradient(#232323,black);
+     */
+     background-color: black;
     width: 100%;
     height: calc(100vh - 112px);
     padding: 20px 50px;

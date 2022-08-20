@@ -7,6 +7,7 @@ import Instructions from './Components/Instructions/Instructions';
 import Questionhub from './Components/Questionhub/Questionhub';
 import Coding from './Components/Coding/Coding';
 import Result from './Components/Result/Result';
+import Testcases from './Components/Testcases/Testcases';
 
 
 
@@ -49,7 +50,9 @@ function App() {
     {/* <Instructions /> */}
     {/* <Questionhub /> */}
     {/* <Coding></Coding> */}
-    <Result />
+    {/* <Result /> */}
+    <Testcases/>
+  
 
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="bottom">
       <Container>

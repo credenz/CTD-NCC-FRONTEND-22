@@ -4,7 +4,7 @@ import { Card } from "react-bootstrap";
 import "./rdiv.css";
 // import Code_Editor from '../code_editor/Code_Editor';
 import AceEditor from "react-ace";
-
+import run from "./run.png";
 import "ace-builds/src-noconflict/mode-c_cpp";
 import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-noconflict/mode-python";
@@ -90,7 +90,13 @@ function Rdiv() {
       </Card>
       <Card className="rtopnav rbottomnav bg-t">
         <div >
-          <button className="rbn rbn1 bg-t  b-1 c-w br-2 pd-lr-15">||Run</button>
+          <button className="rbn rbn1 bg-t  b-1 c-w br-2 pd-lr-15"><img
+                    src={run}
+                    alt=""
+                    srcset=""
+                    className="mb-1"
+                    style={{height:"15px"}}
+                  />{`  Run`}</button>
         </div>
         <div >
           <button className="rbn rbn2 bg-t  b-1 c-w br-2 pd-lr-15">Load Buffer</button>
