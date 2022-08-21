@@ -7,7 +7,6 @@
     padding-bottom: 56px; */
     background-image: radial-gradient(#232323,black);
 }
-
 .t-pg-console{
     height: 80%;
     width: 350px;
@@ -19,7 +18,7 @@
 .t-pg-tcs{
     /* height: 80%; */
     /* width: 350px; */
-    flex: 0.6;
+    flex: 0.8;
     background-color: transparent;
     max-height: 80%;
     overflow-y: auto;

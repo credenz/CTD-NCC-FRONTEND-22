@@ -8,6 +8,10 @@ import Questionhub from './Components/Questionhub/Questionhub';
 import Coding from './Components/Coding/Coding';
 import Result from './Components/Result/Result';
 import Testcases from './Components/Testcases/Testcases';
+import Leaderboard from './Components/Leaderboard/Leaderboard';
+import Submissions from './Components/Submissions/Submissions';
+
+// import Leaderboard from './Components/Submissions/Submissions';
 
 
 
@@ -51,8 +55,9 @@ function App() {
     {/* <Questionhub /> */}
     {/* <Coding></Coding> */}
     {/* <Result /> */}
-    <Testcases/>
-  
+    {/* <Testcases/> */}
+    {/* <Leaderboard s="0" e="9"/> */}
+    <Submissions />
 
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="bottom">
       <Container>

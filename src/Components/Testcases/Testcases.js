@@ -52,7 +52,7 @@ function Testcases() {
         {console_content}
       </Card>
       <div className="t-pg-tcs">
-        <Card className="t-pg-tc d-flex flex-row m-2 p-2 justify-content-around align-items-between text-white br-w">
+        <Card className="t-pg-tc d-flex flex-row m-1 p-1 justify-content-around align-items-between text-white br-w">
           <div>
             <h4>No.</h4>
           </div>
@@ -67,7 +67,7 @@ function Testcases() {
         </Card>
         {testcases_data.map((testcase) => {
           return (
-            <Card className="t-pg-tc d-flex flex-row m-2 p-2 justify-content-around align-items-between text-white br-w-1">
+            <Card className="t-pg-tc d-flex flex-row m-1 p-1 justify-content-around align-items-between text-white br-w-1">
               <div>
                 <h4>{testcase.no}</h4>
               </div>
@@ -79,7 +79,7 @@ function Testcases() {
               <div
                 className={testcase.accepted ? "text-success" : "text-danger"}
               >
-                <h4>
+                <h4 className="ml-5">
                   {testcase.accepted ? "Passed  " : "Failed  "}
                   <img
                     src={testcase.accepted ? tick : cross}

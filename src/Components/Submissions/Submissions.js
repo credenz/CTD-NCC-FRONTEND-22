@@ -1,0 +1,185 @@
+import "./Submissions.css";
+import Card from "react-bootstrap/Card";
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import AceEditor from "react-ace";
+import { useState } from "react";
+
+function Submissions() {
+  const [showmodal , Switchmodal]=useState(false);
+  const [modal_body , change_content]=useState("");
+  let ind=0;
+    const s_data=[{
+        sr:1,
+        s_time:"10:45",
+        s_score:100,
+        s_view:"abc1",
+        s_lang:"c"
+    },{
+        sr:2,
+        s_time:"01:45",
+        s_score:80,
+        s_view:"abc2",
+        s_lang:"c"
+    },{
+        sr:3,
+        s_time:"06:30",
+        s_score:50,
+        s_view:"abc3",
+        s_lang:"c"
+    },{
+        sr:4,
+        s_time:"09:45",
+        s_score:0,
+        s_view:"abc4",
+        s_lang:"c"
+    },{
+        sr:5,
+        s_time:"05:15",
+        s_score:60,
+        s_view:"abc",
+        s_lang:"c"
+    },{
+        sr:6,
+        s_time:"08:45",
+        s_score:10,
+        s_view:"abc",
+        s_lang:"c"
+    },{
+        sr:6,
+        s_time:"08:45",
+        s_score:10,
+        s_view:"abc",
+        s_lang:"c"
+    },{
+        sr:6,
+        s_time:"08:45",
+        s_score:10,
+        s_view:"abc",
+        s_lang:"c"
+    },{
+        sr:6,
+        s_time:"08:45",
+        s_score:10,
+        s_view:"abc",
+        s_lang:"c"
+    }];
+
+    function handleclick(x){
+      x-=1;
+      let z=s_data[x].s_view;
+      console.log(z);
+      
+      Switchmodal(true);
+      change_content(z);
+      
+    }
+  return (
+    <div className="submissions_pg d-flex flex-column justify-content-start align-items-center">
+      <Card className="submission_top_c text-white m-3 mt-4">
+        <p className="d-flex flex-row justify-content-around align-items-center submission_top m-1 p-1 text-white">
+          <div className="p-0 m-0" >
+            <h5 className="p-0 m-0" >
+              <a href="http://youtube.com" className="text-white">1</a>
+            </h5>
+          </div>
+          <div className="p-0 m-0">
+            <h5 className="p-0 m-0">
+              <a href="http://youtube.com" className="text-white">2</a>
+            </h5>
+          </div >
+          <div className="p-0 m-0">
+            <h5 className="p-0 m-0">
+              <a href="http://youtube.com" className="text-white">3</a>
+            </h5>
+          </div >
+          <div className="p-0 m-0">
+            <h5 className="p-0 m-0">
+              <a href="http://youtube.com" className="text-white">4</a>
+            </h5>
+          </div>
+          <div className="p-0 m-0">
+            <h5 className="p-0 m-0">
+              <a href="http://youtube.com" className="text-white">5</a>
+            </h5>
+          </div>
+          <div className="p-0 m-0">
+            <h5 className="p-0 m-0">
+              <a href="http://youtube.com" className="text-white">6</a>
+            </h5>
+          </div>
+        </p>
+      </Card>
+      <Button onClick={()=>{Switchmodal(true)}}>hello</Button>
+      <Card className="submissions-m-div m-3 bg-transparent text-white">
+        <Card className="d-flex flex-row justify-content-around align-items-center bg-transparent br-2 m-2 p-1">
+            <div><h4>Sr No.</h4></div>
+            <div><h4>Time</h4></div>
+            <div><h4>Score</h4></div>
+            <div><h4>View</h4></div>
+        </Card>
+        <Card className="bg-transparent submissions-m-div-bottom">
+            {s_data.map((obj)=>{
+              var sr_no=obj.sr;
+              // console.log(sr_no);
+              
+                return(
+                    <Card className="d-flex flex-row justify-content-around align-items-center bg-transparent br-1 m-1 p-1">
+                <div id={`sr_${obj.sr}`}><h4>{obj.sr}</h4></div>
+                <div><h4>{obj.s_time}</h4></div>
+                <div><h4>{obj.s_score}</h4></div>
+                <div><h4><Button onClick={()=>{
+                handleclick(obj.sr);
+                }}>View</Button></h4></div>
+                
+                </Card>
+                )
+            })}
+        </Card>
+      </Card>
+      <Modal
+        size="lg"
+        show={showmodal}
+        onHide={() => Switchmodal(false)}
+        aria-labelledby="example-modal-sizes-title-lg"
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="example-modal-sizes-title-lg">
+            Large Modal
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body id="modal_body">
+          {/* <h5 id="modal_body_h">{modal_body}</h5> */}
+          <div className="s_pg_ace_e">
+            <AceEditor
+            mode="c_cpp"
+            theme="monokai"
+            name="UNIQUE_ID_OF_DIV"
+            style={{ height: "100%", width: "100%"}}
+            value={modal_body}
+            editorProps={{ $blockScrolling: true }}
+            setOptions={{
+              tabSize: 1,
+              showPrintMargin: false, // boolean: true if show the vertical print margin
+              showGutter: true, // boolean: true if show line gutter
+              wrap: true,
+              readOnly:true
+            }}
+            />
+            </div> 
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={()=>{navigator.clipboard.writeText(modal_body);}}>
+            Copy
+          </Button>
+          <Button variant="primary" onClick={()=>Switchmodal(false)}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      
+    </div>
+  );
+}
+
+export default Submissions;

@@ -42,7 +42,10 @@ function Rdiv() {
     console.log(e.target.value);
     // console.log(theme);
   }
-
+  function editor_c(e){
+    console.log(e);
+    
+  }
   return (
     <Card className="rdiv">
       {/* {lang}{theme} */}
@@ -74,6 +77,7 @@ function Rdiv() {
           name="UNIQUE_ID_OF_DIV"
           style={{ height: "100%", width: "100%", backgroundColor:cdc }}
           resize="True"
+          onChange={editor_c}
           editorProps={{ $blockScrolling: true }}
           setOptions={{
             enableBasicAutocompletion: true,

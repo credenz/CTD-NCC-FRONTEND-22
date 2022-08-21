@@ -1,0 +1,9 @@
+.leaderboard-pg{
+    height: calc(100vh - 112px);
+    margin-top: 56px;
+    background-image: radial-gradient(#232323,black);
+}
+
+.leaderboard-table{
+    width: 80%;
+}
