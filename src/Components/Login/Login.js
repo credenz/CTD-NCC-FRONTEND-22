@@ -4,18 +4,20 @@ import Card from "react-bootstrap/Card";
 import "./Login.css";
 // import Image from "react-bootstrap/Image";
 import Img1 from "./login_img_1.png";
+import Img2 from "./user.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Login() {
   return (
     <div className="login_pg d-flex justify-content-center align-items-center text-center">
-      <Card className="login_pg_mdiv d-flex flex-col">
+      <Card className="login_pg_mdiv d-flex flex-col m-3">
         <div>
           <h1 className="text-white pt-3 fs1 font-weight-bold">Ncc 2.0</h1>
         </div>
-        <div className="login_pg_mdiv2 d-flex flex-row p-2">
+        <div className="login_pg_mdiv2 d-flex flex-row p-2 ">
           <div className="login_pg_ldiv">
             <img src={Img1} alt="" srcset="" className="login_pg_ldiv_img" />
+            <img src={Img2} alt="" srcset="" className="login_pg_ldiv_img2" />
           </div>
           <div className="login_pg_rdiv p-4 d-flex flex-column">
             <Form>

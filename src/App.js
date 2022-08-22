@@ -11,7 +11,10 @@ import Testcases from './Components/Testcases/Testcases';
 import Leaderboard from './Components/Leaderboard/Leaderboard';
 import Submissions from './Components/Submissions/Submissions';
 import {BrowserRouter as Router,Switch,Route,Link,Routes} from 'react-router-dom';
-// import Leaderboard from './Components/Submissions/Submissions';
+import heart from "./love.png";
+import Notfound from './Components/NotFound/Notfound';
+import Navbarr from './Components/Navbarr/Navbarr';
+
 
 
 
@@ -20,7 +23,6 @@ function App() {
   return (
     
     <Router>
-      {/* <Link to="/about">About</Link> */}
       
       <Routes>
         
@@ -28,46 +30,38 @@ function App() {
         <Route path="/login"  element={<Login />} exact />
         <Route path="/instructions"  element={<Instructions />} exact />
         <Route path="/questionhub"  element={<Questionhub />} exact />
-        <Route path="/code"  element={<Coding />} exact />
+        <Route path="/coding"  element={<Coding />} exact />
         <Route path="/testcases"  element={<Testcases />} exact />
         <Route path="/submissions"  element={<Submissions />} exact />
         <Route path="/leaderboard"  element={<Leaderboard />} exact />
         <Route path="/result"  element={<Result />} exact />
+        <Route path="*"  element={<Notfound />}  />
         
       </Routes>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
+      {/* <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top" >
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="#home">Sponsor logo</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
           </Nav>
-          <Nav>
-            <Nav.Link href="/">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="/about">
-              Dank memes
-            </Nav.Link>
+          <Nav >
+            <Nav.Link href="/instructions" className='text-white' id="nav-ins" >Instructions</Nav.Link>
+            <Nav.Link href="/questionhub" className='text-white ' id="nav-qh">QuestionHub</Nav.Link>
+            <Nav.Link href="/leaderboard" className='text-white' id="nav-lb">Leaderboard</Nav.Link>
+            <Nav.Link href="/submissions" className='text-white ' id="nav-s">Submissions</Nav.Link>
+            <Nav.Link href="/result" className='text-white '>Logout</Nav.Link>
           </Nav>
+            <Navbar.Brand href="#home" className='mli-2'>IEEE logo</Navbar.Brand>
         </Navbar.Collapse>
       </Container>
-    </Navbar>
+    </Navbar> */}
+    <Navbarr />
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="bottom">
-      <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Container className='d-flex justify-content-center align-items-center '>
+        <Navbar.Brand href="#home">Made with <img src={heart} alt="" srcset="" className="hearth" /> by PISB Web Team</Navbar.Brand>
+        {/* <Nav.Link href="#features">Features</Nav.Link> */}
+        {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#features">Features</Nav.Link>
@@ -90,8 +84,8 @@ function App() {
               Dank memes
             </Nav.Link>
           </Nav>
-        </Navbar.Collapse>
-      </Container>
+        </Navbar.Collapse>*/}
+      </Container> 
     </Navbar>
     </Router>
 

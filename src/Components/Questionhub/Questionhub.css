@@ -16,6 +16,7 @@
     border: 2px solid #39998e;
     justify-content:space-between;
      align-items:center;
+     margin: 10px!important;
 }
 
 .divpbar{
@@ -32,6 +33,7 @@
 @media(max-width:1067px){
     .q_hub{
         height: fit-content;
+        min-height: calc(100vh - 112px);
     }
 
 }

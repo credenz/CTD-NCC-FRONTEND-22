@@ -38,3 +38,14 @@
     border: 1px solid white;
 
 }
+
+@media(max-width:800px){
+    .test-cases-pg{
+        flex-direction: column!important;
+        height: fit-content;
+    }
+    .t-pg-tcs , .t-pg-console{
+        width: 90vw;
+        height: fit-content;
+    }
+}

@@ -28,10 +28,10 @@
 }
 
 .submissions-m-div-bottom{
-    height: calc(100% - 250px);
+    height: calc(100vh - 250px);
     overflow-y: auto;
     margin-right: -10px;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
 }
 
 .s_pg_ace_e{

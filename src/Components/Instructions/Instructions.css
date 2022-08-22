@@ -27,3 +27,11 @@
 .s-bt1{
     width: 200px;
 }
+
+@media(max-width:600px){
+    .inst_page{
+        height: fit-content!important;
+        min-height: calc(100vh - 112px);
+        overflow-y: auto;
+    }
+}

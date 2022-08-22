@@ -46,7 +46,7 @@ function Questionhub() {
            {
             Qdata.map((ques)=>{
                 return(
-                <Card className="ques p-3 text-white d-flex  m-2 mt-4">
+                <Card className=" p-3 text-white d-flex  m-2 mt-4 ques">
                     <div className=""><h4>{ques.qid}.  {ques.qhead}</h4></div>
                     <div>Attempts : {ques.quattempts}</div> 
                     <ProgressBar animated now={ques.qprogress} variant="success" className="divpbar m-2" label={`${ques.qprogress}%`}/>
