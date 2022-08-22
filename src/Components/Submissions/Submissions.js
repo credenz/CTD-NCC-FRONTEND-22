@@ -110,7 +110,7 @@ function Submissions() {
           </div>
         </p>
       </Card>
-      <Button onClick={()=>{Switchmodal(true)}}>hello</Button>
+      {/* <Button onClick={()=>{Switchmodal(true)}}>hello</Button> */}
       <Card className="submissions-m-div m-3 bg-transparent text-white">
         <Card className="d-flex flex-row justify-content-around align-items-center bg-transparent br-2 m-2 p-1">
             <div><h4>Sr No.</h4></div>
@@ -142,15 +142,16 @@ function Submissions() {
         show={showmodal}
         onHide={() => Switchmodal(false)}
         aria-labelledby="example-modal-sizes-title-lg"
+        
       >
-        <Modal.Header closeButton>
-          <Modal.Title id="example-modal-sizes-title-lg">
-            Large Modal
+        <Modal.Header closeButton className="bg-custom text-white ">
+          <Modal.Title id="example-modal-sizes-title-lg" className="text-center">
+            View Submission
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body id="modal_body">
+        <Modal.Body id="modal_body" className="bg-custom">
           {/* <h5 id="modal_body_h">{modal_body}</h5> */}
-          <div className="s_pg_ace_e">
+          <div className="s_pg_ace_e ">
             <AceEditor
             mode="c_cpp"
             theme="monokai"
@@ -168,9 +169,9 @@ function Submissions() {
             />
             </div> 
         </Modal.Body>
-        <Modal.Footer>
+        <Modal.Footer className="bg-custom">
           <Button variant="secondary" onClick={()=>{navigator.clipboard.writeText(modal_body);}}>
-            Copy
+            Copy Code
           </Button>
           <Button variant="primary" onClick={()=>Switchmodal(false)}>
             Close

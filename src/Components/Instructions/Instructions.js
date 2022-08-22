@@ -18,7 +18,7 @@ function Instructions(){
         }
     }
     return(
-        <div className="inst_page d-flex justify-content-center align-items-center text-white">
+        <div className="inst_page d-flex justify-content-center align-items-center text-white text-center">
             <Card className='inst_page_mdiv br2 p-2'>
             <h1 className='text-white fs1 m-3 font-weight-bold'>Instructions</h1>
             <ol className='text-left i1 p1'>

@@ -29,7 +29,8 @@ function Result() {
 ]
   return (
     <div className="result_pg">
-      <h1 className="text-white p-3">
+      <h1 className="text-white p-3 text-center
+      ">
         Thank-you
         <span className="text-success">
           <svg

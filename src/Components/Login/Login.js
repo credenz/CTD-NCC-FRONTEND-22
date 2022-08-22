@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Login() {
   return (
-    <div className="login_pg d-flex justify-content-center align-items-center">
+    <div className="login_pg d-flex justify-content-center align-items-center text-center">
       <Card className="login_pg_mdiv d-flex flex-col">
         <div>
           <h1 className="text-white pt-3 fs1 font-weight-bold">Ncc 2.0</h1>
