@@ -13,7 +13,7 @@ function Submissions() {
         sr:1,
         s_time:"10:45",
         s_score:100,
-        s_view:"abc1",
+        s_view:'#include <bits/stdc++.h>\n#define ll long long \nusing namespace std;\n\nll int gcd(ll int x, ll int y) {\n    if (y == 0)\n      return x;\n      return gcd(y, x%y);\n  }\n  ll int lcm(ll int x,ll int y){\n      return (x*y)/gcd(x,y);\n  }\n  \nmain() { \n  // your code goes here  \n   ll int n;  \n     cin>>n;  \n     ll int arr[66]={0};  \n     ll int mf=0;  \n     ll int mod=1000000007;  \n     for (int i = 1; i <=n; i++)  \n     {  \n        ll int ci=i;  \n        while(ci){  \n            if(ci%2)arr[mf]++;  \n            ci/=2;  \n            mf++;  \n        }  \n        mf=0;  \n     }  \n   //  for (auto &&i : arr)  \n   //  {    \n  //     cout<<i<<" ";    \n  //  }    \n     ll int ans=0;    \n     mf=1;    \n     for (int i = 0; i < 66; i++)    \n       {      \n          arr[i]%=mod;      \n          mf%=mod;      \n            ans+=(arr[i]*mf)%mod;      \n            ans%=mod;      \n            mf*=10;      \n         }      \n         cout<<ans<<endl;      \n      return 0;      \n    }',
         s_lang:"c"
     },{
         sr:2,

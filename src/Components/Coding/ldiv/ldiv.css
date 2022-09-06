@@ -98,3 +98,17 @@
 	border: 2px solid black;
     border-radius: 5px;
 }
+
+@media(max-width:985px){
+    .ldiv{
+        height: fit-content;
+        width: 100%;
+        margin: 0;
+    }
+    .qdispt{
+        height: 500px;
+    }
+    .inp,.out{
+        height: 300px;
+    }
+}

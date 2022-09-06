@@ -72,6 +72,25 @@
     background-color: black;
 }
 
-/* .ace_editor{
-    background-color: black;
-} */
+@media(max-width:985px){
+    .rdiv{
+        width: 100%;
+        margin: 0px;
+        margin-top: 20px;
+        /* height: 1000px; */
+        margin-bottom: 100px;
+    }
+    .ediv{
+        height: 500px;
+    }
+    .rbottomnav{
+        flex-wrap: wrap;
+    }
+    .rtopnav{
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+    .rbn{
+        margin: 2px;
+    }
+}
