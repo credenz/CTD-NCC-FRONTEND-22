@@ -4,29 +4,97 @@ import C3 from "./crown_bronze.png";
 import C1 from "./crown_gold.png";
 import C2 from "./crown_silver.png";
 import ProgressBar from 'react-bootstrap/ProgressBar';
+import { useEffect, useState } from "react";
+import { Navigate ,useNavigate} from "react-router";
 function Result() {
-  const Userdata = {
+  let a=localStorage.getItem("isloggedin");
+    const navigate=useNavigate();
+    if(a=="false")navigate("/");
+  const token=localStorage.getItem('token');
+  const [loading, setLoading] = useState(0);
+  var axios = require('axios');
+  const [Userdata,Updateuser] = useState({
     UserName: "Yash Patil",
     Qat: 3,
     Score: 250,
     Rank: 125,
-  };
+  });
   const fl = Userdata.UserName.charAt(0);
   fl.toUpperCase();
 
-  const toppers=[{
-    UserName:"Yash Patil",
-    Scorep :96,
+  const [toppers,Updatetopper] = useState([{
+    UserName: "Yash Patil",
+    Scorep: 96,
   },
   {
-    UserName:"Kushal Bhattad",
-    Scorep :40,
+    UserName: "Kushal Bhattad",
+    Scorep: 40,
   },
   {
-    UserName:"Shubham Shelar",
-    Scorep :80,
+    UserName: "Shubham Shelar",
+    Scorep: 80,
   }
-]
+  ]);
+  useEffect(() => {
+    const loadData = async () => {
+      setLoading(true);
+      // console.log(localStorage.getItem('token'));
+      var config = {
+        method: 'get',
+        url: 'http://127.0.0.1:8000/NCC/rank',
+        headers: {
+          'Authorization': `${token}`
+        }
+      };
+
+      const subs = await axios(config)
+
+      // console.log('rank', JSON.stringify(subs.data))
+      Userdata.Rank=subs.data[0];
+      // console.log(Userdata);
+
+      config.url='http://127.0.0.1:8000/NCC/user';
+      const usd = await axios(config);
+      console.log(usd.data);
+      Userdata.UserName=usd.data.username;
+      Userdata.Score=usd.data.total_score;
+
+
+      config.url='http://127.0.0.1:8000/NCC/allranks';
+      const allusd = await axios(config);
+      console.log(allusd.data);
+      // let topper1=allusd.data[0];
+      // console.log(topper1);
+      let lis=Object.keys(allusd.data);
+          let lis1=allusd.data;
+          console.log("lis",typeof(lis));
+          let tempdata=[];
+          for(let i=0;i<3;i++){
+            tempdata.push({Rank:`${i+1}`,...lis1[lis[i]],Username:lis[i]});
+            console.log(lis[i]);
+          }
+          console.log(tempdata[0]);
+      toppers[0].UserName = tempdata[0].Username;
+      toppers[1].UserName= tempdata[1].Username;
+      toppers[2].UserName=tempdata[2].Username;
+      toppers[0].Scorep=tempdata[0].total_score;
+      toppers[1].Scorep=tempdata[1].total_score;
+      toppers[2].Scorep=tempdata[2].total_score;
+        config.url='http://127.0.0.1:8000/NCC/rank';
+        const urank = await axios(config);
+        Userdata.Rank=urank.data.rank;
+      setLoading(false);
+    }
+    loadData();
+    localStorage.clear();
+    localStorage.setItem("isloggedin",false);
+  }, [token]);
+
+  if (loading) {
+    return (
+      <>Loadingg....</>
+    )
+  }
   return (
     <div className="result_pg">
       <h1 className="text-white p-3 text-center
@@ -83,28 +151,28 @@ function Result() {
           {/* <p><h5>Username : {Userdata.UserName}</h5></p> */}
         </Card>
         <Card className="cresults bg-transparent text-white p-4 d-flex  m-3 text-left">
-        <h4 className="text-left">
+          <h4 className="text-left">
             <p className="tp">
-            <img src={C1} alt="" srcset="" className="crown-1" /> {toppers[0].UserName}
+              <img src={C1} alt="" srcset="" className="crown-1" /> {toppers[0].UserName} | {toppers[0].Scorep}
             </p>
-             <ProgressBar striped variant="warning" now={toppers[0].Scorep}  className='cresults_p'/>
-        </h4>
-        <h4>
+            <ProgressBar striped variant="warning" now={toppers[0].Scorep} className='cresults_p' />
+          </h4>
+          <h4>
             <p className="tp">
-            <img src={C2} alt="" srcset="" className="crown-2" /> {toppers[1].UserName}
+              <img src={C2} alt="" srcset="" className="crown-2" /> {toppers[1].UserName} | {toppers[1].Scorep}
             </p>
             <p>
-            <ProgressBar striped variant="secondary" now={toppers[1].Scorep} className='cresults_p'/>
+              <ProgressBar striped variant="secondary" now={toppers[1].Scorep} className='cresults_p' />
             </p>
-        </h4>
-        <h4>
+          </h4>
+          <h4>
             <p className="tp">
-            <img src={C3} alt="" srcset="" className="crown-3" /> {toppers[2].UserName} <span className="m-5"></span>
+              <img src={C3} alt="" srcset="" className="crown-3" /> {toppers[2].UserName} | {toppers[2].Scorep} <span className="m-5"></span>
             </p>
             <p>
-            <ProgressBar striped variant="success" now={toppers[2].Scorep} className='cresults_p'/>
+              <ProgressBar striped variant="success" now={toppers[2].Scorep} className='cresults_p' />
             </p>
-        </h4>
+          </h4>
         </Card>
       </div>
     </div>
@@ -112,4 +180,4 @@ function Result() {
 }
 
 export default Result;
-{/* <div> Icons made by <a href="https://www.freepik.com" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div> */}
+{/* <div> Icons made by <a href="https://www.freepik.com" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div> */ }
