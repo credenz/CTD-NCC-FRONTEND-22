@@ -303,7 +303,7 @@ const   handleFile = (e) => {
           <label htmlFor="inpfff" className="rbn rbn3 bg-t  b-1 c-w br-2 pd-lr-15">
             Choose File
           </label>
-          <input type="file" name="inpf" id="inpfff" onChange={e => 
+          <input type="file" name="inpf" id="inpfff" accept=".py,.c,.cpp" onChange={e => 
             handleChangeFile(e.target.files[0])}/>
 
         </div>
