@@ -42,7 +42,7 @@ function Result() {
       // console.log(localStorage.getItem('token'));
       var config = {
         method: 'get',
-        url: 'http://127.0.0.1:8000/NCC/rank',
+        url: 'https://admin.ncc.pictieee.in/NCC/rank',
         headers: {
           'Authorization': `${token}`
         }
@@ -54,14 +54,14 @@ function Result() {
       Userdata.Rank=subs.data[0];
       // console.log(Userdata);
 
-      config.url='http://127.0.0.1:8000/NCC/user';
+      config.url='https://admin.ncc.pictieee.in/NCC/user';
       const usd = await axios(config);
       console.log(usd.data);
       Userdata.UserName=usd.data.username;
       Userdata.Score=usd.data.total_score;
 
 
-      config.url='http://127.0.0.1:8000/NCC/allranks';
+      config.url='https://admin.ncc.pictieee.in/NCC/allranks';
       const allusd = await axios(config);
       console.log(allusd.data);
       // let topper1=allusd.data[0];
@@ -81,7 +81,7 @@ function Result() {
       toppers[0].Scorep=tempdata[0].total_score;
       toppers[1].Scorep=tempdata[1].total_score;
       toppers[2].Scorep=tempdata[2].total_score;
-        config.url='http://127.0.0.1:8000/NCC/rank';
+        config.url='https://admin.ncc.pictieee.in/NCC/rank';
         const urank = await axios(config);
         Userdata.Rank=urank.data.rank;
       setLoading(false);

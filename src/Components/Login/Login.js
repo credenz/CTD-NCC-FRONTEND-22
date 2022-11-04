@@ -43,7 +43,7 @@ function Login() {
     var config = {
       method: 'post',
       data:{username:name,password:pass},
-      url: 'http://127.0.0.1:8000/auth/token/login',
+      url: 'https://admin.ncc.pictieee.in/auth/token/login',
       headers: {
         'Content-Type': 'application/json',
       }
@@ -62,7 +62,8 @@ function Login() {
     })
       .catch(function (error) {
         console.log(error.code);
-        document.getElementById('errormsg').textContent=error.code;
+        document.getElementById('errormsg').textContent="Invalid Credentials!";
+        // document.getElementById('errormsg').textContent=error.code;
         document.getElementById('errormsg').classList.add('show');
       });
     // console.log('questionsList', questionsList.data)

@@ -22,7 +22,7 @@ function Submissions() {
       // console.log(localStorage.getItem('token'));
       var config = {
         method: 'get',
-        url: 'http://127.0.0.1:8000/NCC/submission',
+        url: 'https://admin.ncc.pictieee.in/NCC/submission',
         headers: {
           'Authorization': `${token}`
         }

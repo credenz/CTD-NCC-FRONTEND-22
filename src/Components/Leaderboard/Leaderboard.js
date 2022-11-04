@@ -18,7 +18,7 @@ function Leaderboard(props) {
           // console.log(localStorage.getItem('token'));
           var config = {
               method: 'get',
-              url: 'http://127.0.0.1:8000/NCC/allranks',
+              url: 'https://admin.ncc.pictieee.in/NCC/allranks',
               headers: {
                   'Authorization': `${token}`
               }

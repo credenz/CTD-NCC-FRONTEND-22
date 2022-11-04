@@ -80,7 +80,7 @@ function Rdiv(props) {
     // console.log(inputdiv.textContent);
     var config = {
       method: 'post',
-      url: 'http://127.0.0.1:8000/NCC/custom',
+      url: 'https://admin.ncc.pictieee.in/NCC/custom',
       headers: {
         'Authorization': token,
 
@@ -114,7 +114,7 @@ function Rdiv(props) {
     // console.log(inputdiv.textContent);
     var config = {
       method: 'post',
-      url: `http://127.0.0.1:8000/NCC/submit/${id}`,
+      url: `https://admin.ncc.pictieee.in/NCC/submit/${id}`,
       headers: {
         'Authorization': token,
 
@@ -143,7 +143,7 @@ function Rdiv(props) {
     console.log("hi");
     var config = {
       method: 'get',
-      url: `http://127.0.0.1:8000/NCC/buffer/${id}`,
+      url: `https://admin.ncc.pictieee.in/NCC/buffer/${id}`,
       headers: {
         'Authorization': `${token}`
       }
