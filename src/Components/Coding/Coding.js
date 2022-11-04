@@ -17,7 +17,7 @@ function Coding(props) {
     const navigate=useNavigate();
     if(a=="false")navigate("/");
     let lprops = {
-        i: id,
+        i: id,0 : 0
         // custominp: custominp,
         // changecustominp: Changecustominp,
         // customout: customout,

@@ -8,8 +8,8 @@ import { useEffect, useState } from "react";
 import { Navigate ,useNavigate} from "react-router";
 function Result() {
   let a=localStorage.getItem("isloggedin");
-    const navigate=useNavigate();
-    if(a=="false")navigate("/");
+  //   const navigate=useNavigate();
+  //   if(a=="false")navigate("/");
   const token=localStorage.getItem('token');
   const [loading, setLoading] = useState(0);
   var axios = require('axios');
@@ -38,6 +38,7 @@ function Result() {
   useEffect(() => {
     const loadData = async () => {
       setLoading(true);
+      console.log(token);
       // console.log(localStorage.getItem('token'));
       var config = {
         method: 'get',
@@ -86,7 +87,7 @@ function Result() {
       setLoading(false);
     }
     loadData();
-    localStorage.clear();
+    // localStorage.clear();
     localStorage.setItem("isloggedin",false);
   }, [token]);
 

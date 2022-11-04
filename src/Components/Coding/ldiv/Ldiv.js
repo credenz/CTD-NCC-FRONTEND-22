@@ -1,6 +1,7 @@
 // import React from 'React';
 import { useEffect, useState } from 'react';
 import {Card,Navbar,Nav} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './ldiv.css';
 
 function Ldiv(props){

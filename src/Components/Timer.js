@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useState, useEffect } from 'react';
-
+import { Navigate ,useNavigate} from "react-router";
 const Timer = () => {
   var axios = require('axios');
   const navigate=useNavigate();
@@ -27,6 +27,10 @@ const Timer = () => {
     // console.log('time', time.data.end_time)
     deadline=time.data.end_time;
     const tx = Date.parse(deadline) - Date.now();
+    const tx2=Date.parse(time.data.start_time)-Date.now();
+    if(tx2>0){
+      navigate("/");
+    }
     // console.log(time.data.end_time);
     // localStorage.setItem('h',2);
     }
@@ -36,7 +40,12 @@ const Timer = () => {
 
   const getTime = () => {
     const time = Date.parse(deadline) - Date.now();
-
+    if(time<0){
+      console.log('timer ended');
+      
+      // navigate("/result");
+      window.location.pathname="/result";
+    }
     setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
     setHours(Math.floor((time / (1000 * 60 * 60)) % 24));
     setMinutes(Math.floor((time / 1000 / 60) % 60));
@@ -46,7 +55,7 @@ const Timer = () => {
   useEffect(() => {
     const interval = setInterval(() => getTime(deadline), 1000);
 
-    return () => {clearInterval(interval);navigate("/");};
+    return () => {console.log("time end");clearInterval(interval);};
   }, []);
 
   return (
