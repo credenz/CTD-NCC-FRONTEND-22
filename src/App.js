@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import{Navbar,Nav,Container,NavDropdown} from 'react-bootstrap';
@@ -43,7 +43,7 @@ function App() {
     <Navbarr />
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="bottom">
       <Container className='d-flex justify-content-center align-items-center '>
-        <Navbar.Brand href="#home">Made with <img src={heart} alt="" srcset="" className="hearth" /> by PISB Web Team</Navbar.Brand>
+        <Navbar.Brand >Made with <img src={heart} alt="" srcset="" className="hearth" /> by PISB Web Team</Navbar.Brand>
       </Container> 
     </Navbar>
     </Router>

@@ -15,7 +15,7 @@ function Navbarr(){
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top" >
     <Container>
       <Navbar.Brand className='h-50'><img src={Img} className="h-50"/>  peerlist</Navbar.Brand>
-      <Navbar.Brand href="#home" style={{'margin-left':"40px"}}><Timer /></Navbar.Brand>
+      <Navbar.Brand style={{'margin-left':"40px"}}><Timer /></Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
