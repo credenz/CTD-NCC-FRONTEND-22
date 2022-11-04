@@ -36,7 +36,7 @@ const Testcases = () => {
       let i = 0;
       acdata.map((e) => {
         let tcv = false;
-        if (e == 'AC') tcv = true;
+        if (e == 'Passed') tcv = true;
         temp.push({ no: ++i, status:  `${e}` , accepted:  tcv  })
       })
       console.log(temp);

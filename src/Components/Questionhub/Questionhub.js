@@ -62,7 +62,8 @@ function Questionhub() {
                             <div className=""><h4>{ques.id}.  {ques.title}</h4></div>
                             <div>Attempts : {ques.total_submissions}</div>
                             {/* <div>Score:</div> */}
-                            <ProgressBar animated now={ques.accuracy} variant="success" className="divpbar m-2" label={`${ques.qprogress}%`} />
+                            {/* <h6>Accuracy:</h6> */}
+                            <ProgressBar animated now={(ques.correct_submissions/ques.total_submissions)*100} variant="success" className="divpbar m-2" label={(ques.correct_submissions/ques.total_submissions)*100}/>
                             <Button variant="primary" type="submit" className="mb-2 qat-btn" onClick={Redirect} id={ques.id}>
                                 Attempt
                             </Button>

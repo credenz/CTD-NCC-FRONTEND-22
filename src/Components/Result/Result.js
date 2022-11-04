@@ -19,8 +19,9 @@ function Result() {
     Score: 250,
     Rank: 125,
   });
-  const fl = Userdata.UserName.charAt(0);
-  fl.toUpperCase();
+  const fl1 = Userdata.UserName.charAt(0);
+  
+  const fl=fl1.toUpperCase();
 
   const [toppers,Updatetopper] = useState([{
     UserName: "Yash Patil",

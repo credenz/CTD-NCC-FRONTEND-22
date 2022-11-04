@@ -4,6 +4,8 @@ import{Navbar,Nav,Container,NavDropdown} from 'react-bootstrap';
 import { NavLink, useLocation } from "react-router-dom";
 import { Navigate ,useNavigate} from "react-router";
 import Timer from '../Timer';
+import Img from "./peerlist_logo.png";
+import Img2 from "./ieee.png"
 function Navbarr(){
   const location = useLocation();
 
@@ -12,7 +14,7 @@ function Navbarr(){
     return(
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top" >
     <Container>
-      <Navbar.Brand href="#home">Sponsor logo</Navbar.Brand>
+      <Navbar.Brand className='h-50'><img src={Img} className="h-50"/>  peerlist</Navbar.Brand>
       <Navbar.Brand href="#home" style={{'margin-left':"40px"}}><Timer /></Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
@@ -25,7 +27,7 @@ function Navbarr(){
           <Nav.Link href="/submissions" className={location.pathname==='/submissions'?"text-white nav-activee":"text-white"} >Submissions</Nav.Link>
           <Nav.Link href="/result" className='text-white '>Logout</Nav.Link>
         </Nav>
-          <Navbar.Brand href="#home" className='mli-2'>IEEE logo</Navbar.Brand>
+          <Navbar.Brand className='mli-2 h-50'><img src={Img2} className="h-50 p-l-30"/></Navbar.Brand>
       </Navbar.Collapse>
     </Container>
   </Navbar>
@@ -36,14 +38,14 @@ function Navbarr(){
     return(
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top" >
     <Container>
-      <Navbar.Brand href="#home">Sponsor logo</Navbar.Brand>
+    <Navbar.Brand className='h-50'><img src={Img} className="h-50"/>  peerlist</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
         </Nav>
         <Nav >
         </Nav>
-          <Navbar.Brand href="#home" className='mli-2'>IEEE logo</Navbar.Brand>
+        <Navbar.Brand className='mli-2 h-50'><img src={Img2} className="h-50 p-l-30"/></Navbar.Brand>
       </Navbar.Collapse>
     </Container>
   </Navbar>
