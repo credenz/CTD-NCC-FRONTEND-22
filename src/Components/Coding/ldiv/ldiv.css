@@ -51,11 +51,13 @@
 }
 .qdispt{
     width: 100%;
-    min-height: 100%;
+    /* min-height: 100%; */
+    height: calc(100vh - 250px);
     resize: none;
     padding: 20px;
     padding-left: 30px;
     border: 0px ;
+    overflow-y: scroll;
 }
 .ipop{
     min-height: 300px;

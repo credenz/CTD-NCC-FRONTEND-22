@@ -78,7 +78,7 @@ function cc(e){
         <div className='qdisp bg-t b-2 br-2'>
             {/* <textarea name="" className='qdispt bg-t c-w 'id="qdispt" readOnly>{qdisp}</textarea> */}
             <Card className='qdispt bg-t c-w ' id="qdispt">
-                <h4>{qdisp.id}  {qdisp.title} </h4>
+                <h4>{qdisp.id}.  {qdisp.title} </h4>
                 <h5>{qdisp.body}</h5>
                 <h4>Constraints:</h4>
                 <h5>{qdisp.constraints}</h5>
@@ -86,6 +86,10 @@ function cc(e){
                 <h5>{qdisp.input_format}</h5>
                 <h4>Output Format:</h4>
                 <h5>{qdisp.output_format}</h5>
+                <h4>Sample Input:</h4>
+                <h5>{qdisp.sample_input}</h5>
+                <h4>Sample Output:</h4>
+                <h5>{qdisp.sample_output}</h5>
                 </Card>
         </div>
         {/* <Card className='ipop bg-t'>
