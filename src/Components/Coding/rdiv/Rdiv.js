@@ -247,7 +247,7 @@ const   handleFile = (e) => {
           <select name="lang" id="lang" onChange={langc} className="bg-t c-w br-2 b-1" value={langs}>
             <option value="c" className="bg-bl c-w">C</option>
             <option value="c++" className="bg-bl c-w">C++</option>
-            <option value="java" className="bg-bl c-w">Java</option>
+            {/* <option value="java" className="bg-bl c-w">Java</option> */}
             <option value="python" className="bg-bl c-w">Python</option>
           </select>
         </div>
