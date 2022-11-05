@@ -81,15 +81,21 @@ function cc(e){
                 <h4>{qdisp.id}.  {qdisp.title} </h4>
                 <h5>{qdisp.body}</h5>
                 <h4>Constraints:</h4>
-                <h5>{qdisp.constraints}</h5>
+                {/* <h5>{qdisp.constraints}</h5> */}
+                <textarea value={qdisp.constraints} className={"bg-t c-w disp-textarea"}></textarea>
+                
                 <h4>Input Format:</h4>
-                <h5>{qdisp.input_format}</h5>
+                <textarea value={qdisp.input_format} className={"bg-t c-w disp-textarea"}></textarea>
+                {/* <h5>{qdisp.input_format}</h5> */}
                 <h4>Output Format:</h4>
-                <h5>{qdisp.output_format}</h5>
+                <textarea value={qdisp.output_format} className={"bg-t c-w disp-textarea"}></textarea>
+                {/* <h5>{qdisp.output_format}</h5> */}
                 <h4>Sample Input:</h4>
-                <h5>{qdisp.sample_input}</h5>
+                <textarea value={qdisp.sample_input} className={"bg-t c-w disp-textarea"}></textarea>
+                {/* <h5>{qdisp.sample_input}</h5> */}
                 <h4>Sample Output:</h4>
-                <h5 > {qdisp.sample_output}</h5>
+                <textarea value={qdisp.sample_output} className={"bg-t c-w disp-textarea"}></textarea>
+                {/* <h5 >{qdisp.sample_output}</h5> */}
                 </Card>
         </div>
         {/* <Card className='ipop bg-t'>

@@ -106,7 +106,12 @@
 	border: 2px solid black;
     border-radius: 5px;
 }
-
+.disp-textarea{
+    border: 0px ;
+    min-height: 200px;
+    resize: none;
+    font-size: 18px;
+}
 @media(max-width:985px){
     .ldiv{
         height: fit-content;
