@@ -75,7 +75,7 @@ function Login() {
     <div className="login_pg d-flex justify-content-center align-items-center text-center">
       <Card className="login_pg_mdiv d-flex flex-col m-3">
         <div>
-          <h1 className="text-white pt-3 fs1 font-weight-bold">Ncc 2.0</h1>
+          <h1 className="text-white pt-3 fs1 font-weight-bold">NCC 2.0</h1>
         </div>
         <div className="login_pg_mdiv2 d-flex flex-row p-2 ">
           <div className="login_pg_ldiv">
