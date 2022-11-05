@@ -22,7 +22,7 @@
 }
 
 .divpbar{
-    /* width: 80%; */
+    width: 80%;
     background-color: transparent;
     border: 0.5px solid #39998e;
     min-height: 20px;
