@@ -72,7 +72,7 @@ function cc(e){
           <Nav.Link href="/coding/3"  className={qid==3?"qccactive":""}>Q3</Nav.Link>
           <Nav.Link href="/coding/4"  className={qid==4?"qccactive":""}>Q4</Nav.Link>
           <Nav.Link href="/coding/5"  className={qid==5?"qccactive":""}>Q5</Nav.Link>
-          <Nav.Link href="/coding/6"  className={qid==6?"qccactive":""}>Q6</Nav.Link>
+          {/* <Nav.Link href="/coding/6"  className={qid==6?"qccactive":""}>Q6</Nav.Link> */}
         
         </Card>
         <div className='qdisp bg-t b-2 br-2'>
