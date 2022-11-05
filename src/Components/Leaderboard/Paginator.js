@@ -22,7 +22,7 @@ function Items({ currentItems }) {
             <th>Q3</th>
             <th>Q4</th>
             <th>Q5</th>
-            <th>Q6</th>
+            {/* <th>Q6</th> */}
             <th>Total Score</th>
           </tr>
         </thead>
@@ -37,7 +37,7 @@ function Items({ currentItems }) {
             <th>{item[3]}</th>
             <th>{item[4]}</th>
             <th>{item[5]}</th>
-            <th>{item[6]}</th>
+            {/* <th>{item[6]}</th> */}
             <th>{item.total_score}</th>
           </tr>
         ))}
