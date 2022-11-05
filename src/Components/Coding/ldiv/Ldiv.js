@@ -89,7 +89,7 @@ function cc(e){
                 <h4>Sample Input:</h4>
                 <h5>{qdisp.sample_input}</h5>
                 <h4>Sample Output:</h4>
-                <h5 value={qdisp.sample_output}> </h5>
+                <h5 > {qdisp.sample_output}</h5>
                 </Card>
         </div>
         {/* <Card className='ipop bg-t'>
