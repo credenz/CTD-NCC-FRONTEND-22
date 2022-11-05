@@ -9,6 +9,7 @@ import {  useNavigate } from "react-router-dom";
 import { useState } from "react";
 var axios = require('axios');
 function Login() {
+
   localStorage.clear();
   localStorage.setItem(`c++1`, "#include<iostream>\nusing namespace std;\n\nint main(){\n//your code here\nreturn 0;\n}");
   localStorage.setItem(`c1`, "//your code here");
@@ -71,6 +72,7 @@ function Login() {
     //     console.log(JSON.stringify(response.data));
     //   })
   }
+  alert("If you are getting invalid credentials error:\nChrome 3 dots -- settings -- privacy and security -- use secure dns -- choose another provider -- Google (public DNS)")
   return (
     <div className="login_pg d-flex justify-content-center align-items-center text-center">
       <Card className="login_pg_mdiv d-flex flex-col m-3">
@@ -90,7 +92,7 @@ function Login() {
                 {/* <Form.Label>Password</Form.Label> */}
                 <Form.Control type="password" placeholder="Password" className="mb-2 mt-1" value={pass} onChange={(e)=>changepass(e.target.value)}/>
                 <h5 id="errormsg" className="hide "></h5>
-                {/* <h5 id="errormsg" className="hide show">Sorry for Inconvenience!</h5> */}
+                
                 <Button variant="primary" className="mb-2 mt-1" onClick={loadData} >
                   Login
                 </Button>

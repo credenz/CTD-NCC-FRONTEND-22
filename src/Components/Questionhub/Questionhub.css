@@ -1,5 +1,7 @@
 .q_hub{
     height: calc(100vh - 112px);
+    min-height: fit-content;
+    overflow-y: auto;
     margin-top: 56px;
     margin-bottom: 56px;
     background-image: radial-gradient(#232323,black);

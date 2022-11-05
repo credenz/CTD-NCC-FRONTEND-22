@@ -82,7 +82,7 @@ function cc(e){
                 <h5>{qdisp.body}</h5>
                 <h4>Constraints:</h4>
                 {/* <h5>{qdisp.constraints}</h5> */}
-                <textarea value={qdisp.constraints} className={"bg-t c-w disp-textarea"} readOnly></textarea>
+                <textarea value={qdisp.constraints} className={"bg-t c-w disp-textarea"} readOnly>{qdisp.constraints}</textarea>
                 
                 <h4>Input Format:</h4>
                 <textarea value={qdisp.input_format} className={"bg-t c-w disp-textarea"} readOnly></textarea>
