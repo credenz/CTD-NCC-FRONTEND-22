@@ -102,6 +102,7 @@ function Rdiv(props) {
 
   }
   function handlesubmit() {
+    alert("Please wait while your code is executing.")
     var axios = require('axios');
     var FormData = require('form-data');
     var data = new FormData();
