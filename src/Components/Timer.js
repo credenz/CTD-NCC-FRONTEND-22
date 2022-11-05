@@ -29,7 +29,7 @@ const Timer = () => {
     const tx = Date.parse(deadline) - Date.now();
     const tx2=Date.parse(time.data.start_time)-Date.now();
     if(tx2>0){
-      alert("Contest will start at 8:30pm !")
+      alert("Contest will start at 8:45pm !")
       navigate("/");
     }
     // console.log(time.data.end_time);
