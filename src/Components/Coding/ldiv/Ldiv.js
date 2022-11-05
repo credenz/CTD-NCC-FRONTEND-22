@@ -95,6 +95,8 @@ function cc(e){
                 {/* <h5>{qdisp.sample_input}</h5> */}
                 <h4>Sample Output:</h4>
                 <textarea value={qdisp.sample_output} className={"bg-t c-w disp-textarea"} readOnly></textarea>
+                <h4>Explaination:</h4>
+                <textarea value={qdisp.explaination} className={"bg-t c-w disp-textarea"} readOnly></textarea>
                 {/* <h5 >{qdisp.sample_output}</h5> */}
                 </Card>
         </div>
