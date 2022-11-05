@@ -83,9 +83,9 @@ function cc(e){
                 <h4>Constraints:</h4>
                 <h5>{qdisp.constraints}</h5>
                 <h4>Input Format:</h4>
-                <h5>{qdisp.constraints}</h5>
+                <h5>{qdisp.input_format}</h5>
                 <h4>Output Format:</h4>
-                <h5>{qdisp.constraints}</h5>
+                <h5>{qdisp.output_format}</h5>
                 </Card>
         </div>
         {/* <Card className='ipop bg-t'>

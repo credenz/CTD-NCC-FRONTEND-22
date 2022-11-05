@@ -42,10 +42,11 @@ function Instructions(){
             <Card className='inst_page_mdiv br2 p-2 m-3'>
             <h1 className='text-white fs1 m-3 font-weight-bold'>Instructions</h1>
             <ol className='text-left i1 p1'>
-                <li>Will not communicate with other participants, share ideas of solutions and hacks</li>
-                <li>Will not use third-party code, except stated in http://codeforces.com/blog/entry/8790</li>
-                <li>Will not attempt to deliberately destabilize the testing process and try to hack the contest system in any form</li>
-                <li>Will not use multiple accounts and will take part in the contest using your personal and the single account.</li>
+            <li>Contest will contain 5-6 problems that need to be coded in Python, C++, or C.</li>
+            <li>Single Participant event.</li>
+            <li>For the first correct submission of a question, you will receive the points currently available on that question.</li>
+            <li>For each wrong submission before the correct submission, 10 points will be deducted. If the question was already solved before, no points will be deducted for that question.</li>
+            <li>Plagiarism checks would be done after the contest.</li>
             </ol>
             <p><input type="checkbox" name="" required id="" onChange={chk_inst_st}
             className='m-2 cbx-i' />I have read and understood all the <span >instructions !</span></p>
