@@ -50,7 +50,7 @@ function Instructions(){
             <p><input type="checkbox" name="" required id="" onChange={chk_inst_st}
             className='m-2 cbx-i' />I have read and understood all the <span >instructions !</span></p>
             <div><Button variant="primary"  className="mb-2 s-bt1" id="inst_s_btn" onClick={Redirect} >
-                  Submit
+                  Proceed
                 </Button></div>
                 
             </Card>

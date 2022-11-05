@@ -91,7 +91,7 @@ function Login() {
                 <Form.Control type="password" placeholder="Password" className="mb-2 mt-1" value={pass} onChange={(e)=>changepass(e.target.value)}/>
                 <h5 id="errormsg" className="hide"></h5>
                 <Button variant="primary" className="mb-2 mt-1" onClick={loadData}>
-                  Submit
+                  Login
                 </Button>
               </Form.Group>
             </Form>
