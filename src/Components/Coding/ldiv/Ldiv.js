@@ -79,7 +79,7 @@ function cc(e){
             {/* <textarea name="" className='qdispt bg-t c-w 'id="qdispt" readOnly>{qdisp}</textarea> */}
             <Card className='qdispt bg-t c-w ' id="qdispt">
                 <h4>{qdisp.id}  {qdisp.title} </h4>
-                <h5>{qdisp.description}</h5>
+                <h5>{qdisp.body}</h5>
                 <h4>Constraints:</h4>
                 <h5>{qdisp.constraints}</h5>
                 <h4>Input Format:</h4>
