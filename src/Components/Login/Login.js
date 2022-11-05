@@ -89,8 +89,8 @@ function Login() {
                 <Form.Control type="text" placeholder="Login_id" className="mb-3 mt-1" value={name} onChange={(e)=>changename(e.target.value)}/>
                 {/* <Form.Label>Password</Form.Label> */}
                 <Form.Control type="password" placeholder="Password" className="mb-2 mt-1" value={pass} onChange={(e)=>changepass(e.target.value)}/>
-                {/* <h5 id="errormsg" className="hide show">Contest will start at 8:45 pm!</h5>
-                <h5 id="errormsg" className="hide show">Sorry for Inconvenience!</h5> */}
+                <h5 id="errormsg" className="hide "></h5>
+                {/* <h5 id="errormsg" className="hide show">Sorry for Inconvenience!</h5> */}
                 <Button variant="primary" className="mb-2 mt-1" onClick={loadData} >
                   Login
                 </Button>
