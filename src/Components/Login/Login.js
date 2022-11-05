@@ -72,7 +72,7 @@ function Login() {
     //     console.log(JSON.stringify(response.data));
     //   })
   }
-  alert("If you are getting invalid credentials error:\nChrome 3 dots -- settings -- privacy and security -- use secure dns -- choose another provider -- Google (public DNS)")
+  // alert("If you are getting invalid credentials error:\nChrome 3 dots -- settings -- privacy and security -- use secure dns -- choose another provider -- Google (public DNS)")
   return (
     <div className="login_pg d-flex justify-content-center align-items-center text-center">
       <Card className="login_pg_mdiv d-flex flex-col m-3">
